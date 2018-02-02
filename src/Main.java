@@ -13,31 +13,30 @@ public class Main {
 
         float gold = 50;
         int silver = 8;
-        float SILVERPERGOLD = (float) 6.7;
-        float BROADSWORDCOST = (float) 3.6;
+        float SILVERPERGOLD = 6.7f;
+        float BROADSWORDCOST = 3.6f;
         short broadswords;
 
-        System.out.println("У тебя " + gold + " золотых монет и " + silver + " серебряных.");
+        System.out.printf("У тебя %.0f золотых монет и %d серебряных.", gold, silver);
         gold += silver / SILVERPERGOLD;
-        System.out.println("Это будет " + gold + " золотых монет. ");
-        System.out.println("Сколько палашей ты желаешь приобрести? (каждый стоит 3.6 золотых)");
+        System.out.printf("Это будет %.2f золотых монет.", gold);
+        System.out.printf("Сколько палашей ты желаешь приобрести? (каждый стоит %.1f золотых)%n", BROADSWORDCOST);
 
         broadswords = in.nextShort();
 
         while (broadswords < 0) {
             System.out.println("Маловато палашей ты хочешь. Приходи, когда наиграешь аппетит!");
-            System.out.println("Ну что, нагулял? Сколько палашей ты желаешь приобрести? (каждый стоит 3.6 золотых)");
+            System.out.printf("Ну что, нагулял? Сколько палашей ты желаешь приобрести? (каждый стоит %.1f золотых)%n", BROADSWORDCOST);
             broadswords = in.nextShort();
         }
 
         gold = gold - broadswords * BROADSWORDCOST;
-        System.out.println("Спасибо за покупку. У тебя осталось " + gold + ".");
+        System.out.printf("Спасибо за покупку. У тебя осталось %.2f золотых монет.%n", gold);
         silver = (int) ((gold - (int) gold) * SILVERPERGOLD);
         gold = (int) gold;
-
-        System.out.println("Это будет " + gold + " золотых и " + silver + " серебряных монет.");
+        System.out.printf("Это будет %.0f золотых и %d серебряных монет.%n", gold, silver);
         System.out.println("Спасибо, что посетили Оружейный магазин.");
-        System.out.println("Всего хорошего, сэр " + name);
+        System.out.printf("Всего хорошего, сэр %s", name);
 
     }
 }
