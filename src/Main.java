@@ -36,7 +36,7 @@ public class Main {
         gold = (int) gold;
         System.out.printf("Это будет %.0f золотых и %d серебряных монет.%n", gold, silver);
         System.out.println("Спасибо, что посетили Оружейный магазин.");
-        System.out.printf("Всего хорошего, сэр %s", name);
+        System.out.printf("Всего хорошего, сэр %s!", name);
 
     }
 }
