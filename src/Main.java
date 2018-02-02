@@ -9,12 +9,12 @@ public class Main {
         System.out.println("Как твое имя?");
         name = in.next();
 
-        System.out.println("Что ж, сэр " + name + ", вперед, за покупками!");
+        System.out.printf("Что ж, сэр %s, вперед, за покупками!", name);
 
         float gold = 50;
         int silver = 8;
-        float SILVERPERGOLD = 6.7f;
-        float BROADSWORDCOST = 3.6f;
+        final float SILVERPERGOLD = 6.7f;
+        final float BROADSWORDCOST = 3.6f;
         short broadswords;
 
         System.out.printf("У тебя %.0f золотых монет и %d серебряных.", gold, silver);
